@@ -17,25 +17,47 @@ function playRound (playerSel, computerSel) {
     if (playerSel == `rock` && computerSel == `rock`) {
         return `It's a tie!`;
     } else if (playerSel == `rock` && computerSel == `paper`) {
-        return `You Lose`;
+        return `You lose`;
 }   else if (playerSel == `rock` && computerSel == `scissors`) {
-    return `You win`;
+        return `You win`;
 }   else if (playerSel == `paper` && computerSel == `rock`) {
-    return `You win`;
+        return `You win`;
 }   else if (playerSel == `paper` && computerSel == `scissors`) {
-    return `You Lose`;
+        return `You lose`;
 }   else if (playerSel == `paper` && computerSel == `paper`) {
-    return `It's a tie!`;
+        return `It's a tie!`;
 }   else if (playerSel == `scissors` && computerSel == `scissors`) {
-    return `It's a tie!`;
+        return `It's a tie!`;
 }   else if (playerSel == `scissors` && computerSel == `paper`) {
-    return `You win`;
+        return `You win`;
 }   else if (playerSel == `scissors` && computerSel == `rock`) {
-    return `You Lose`;
+        return `You lose`;
 }
 }
 
-
-const playerSel = prompt(`let's play rock, paper, scissors`).toLowerCase();
+// const playerSel = prompt(`let's play rock, paper, scissors`).toLowerCase();
 const computerSel = computerPlay();
-console.log(playRound(playerSel, computerSel));
+// console.log(playRound(playerSel, computerSel));
+
+function game () {
+        let yourScore = 0;
+        let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+        const playerSel = prompt(`let's play rock, paper, scissors`).toLowerCase();
+        // console.log(playRound(playerSel, computerSel));
+
+    if (playRound=`You win`) {
+        yourScore++;
+    }   else if (playRound=`You lose`) {
+        computerScore++;
+    }}
+    
+    if (yourScore > computerScore) {
+        console.log(`You won!`)
+    } else if (yourScore < computerScore) {
+        console.log(`You lost!`)
+    } else {console.log(`It is a tie!`)}
+}
+
+game();
