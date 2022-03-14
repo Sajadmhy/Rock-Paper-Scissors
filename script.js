@@ -36,28 +36,36 @@ function playRound (playerSel, computerSel) {
 }
 
 // const playerSel = prompt(`let's play rock, paper, scissors`).toLowerCase();
-const computerSel = computerPlay();
+let computerSel = computerPlay();
 // console.log(playRound(playerSel, computerSel));
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
 
-function game () {
-        let yourScore = 0;
-        let computerScore = 0;
+rock.addEventListener('click', () => {alert(playRound('rock',computerPlay()))});
+paper.addEventListener('click', () => {alert(playRound('paper',computerPlay()))});
+scissors.addEventListener('click', () => {alert(playRound('scissors',computerPlay()))});
 
-    for (let i = 0; i < 5; i++) {
-        const playerSel = prompt(`let's play rock, paper, scissors`).toLowerCase();
-        // console.log(playRound(playerSel, computerSel));
+// function game () {
+//         let yourScore = 0;
+//         let computerScore = 0;
 
-    if (playRound=`You win`) {
-        yourScore++;
-    }   else if (playRound=`You lose`) {
-        computerScore++;
-    }}
+//     for (let i = 0; i < 5; i++) {
+//         const playerSel = prompt(`let's play rock, paper, scissors`).toLowerCase();
+//         // console.log(playRound(playerSel, computerSel));
+
+//     if (playRound=`You win`) {
+//         yourScore++;
+//     }   else if (playRound=`You lose`) {
+//         computerScore++;
+//     }}
     
-    if (yourScore > computerScore) {
-        console.log(`You won!`)
-    } else if (yourScore < computerScore) {
-        console.log(`You lost!`)
-    } else {console.log(`It is a tie!`)}
-}
+//     if (yourScore > computerScore) {
+//         console.log(`You won!`)
+//     } else if (yourScore < computerScore) {
+//         console.log(`You lost!`)
+//     } else {console.log(`It is a tie!`)}
+// }
 
-game();
+// game();
+
